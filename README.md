@@ -31,14 +31,16 @@ The **AI Crime Visualizer** is a data-driven platform designed to analyze and fo
 
 ---
 
+---
+
 ## 📊 System Architecture
+
 ```mermaid
 graph LR
     Data[Raw Crime Data] --> Pre[Pre-processing]
     Pre --> Model{AI Model Engine}
     Model --> Visual[Visualizer Dashboard]
     Visual --> User[End User/Police]
----
 
 ## 📬 Connect With Me
 I am always open to discussing **Artificial Intelligence**, **Information Security**, or potential collaborations.
