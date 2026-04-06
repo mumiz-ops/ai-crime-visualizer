@@ -32,6 +32,7 @@ The **AI Crime Visualizer** is a data-driven platform designed to analyze and fo
 ---
 
 ---
+---
 
 ## 📊 System Architecture
 
@@ -41,24 +42,3 @@ graph LR
     Pre --> Model{AI Model Engine}
     Model --> Visual[Visualizer Dashboard]
     Visual --> User[End User/Police]
-
-## 📬 Connect With Me
-I am always open to discussing **Artificial Intelligence**, **Information Security**, or potential collaborations.
-
-<div align="left">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mumiz-a-6868a6287/)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mumizahmad30@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mumiz-ops)
-
-</div>
-
-### 🛠️ Professional Profiles
-* **Portfolio Link:** [mumiz-ops.github.io/ai-crime-visualizer](https://mumiz-ops.github.io/ai-crime-visualizer/)
-* **LinkedIn:** [Mumiz A.](https://www.linkedin.com/in/mumiz-a-6868a6287/)
-* **Email:** mumizahmad30@gmail.com
-
----
-<div align="center">
-  <p><i>Last Updated: April 2026</i></p>
-</div>
