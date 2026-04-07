@@ -35,4 +35,10 @@ title: Login Simulation
       error.style.display = "block";
     }
   });
+  const hour = new Date().getHours();
+let greeting = "Good Evening";
+if (hour < 12) greeting = "Good Morning";
+else if (hour < 18) greeting = "Good Afternoon";
+
+alert(greeting + "! Welcome to Mumiz's AI Laboratory.");
 </script>
