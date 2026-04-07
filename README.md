@@ -1,3 +1,4 @@
+[**🚀 Launch AI Visualizer Portal**](https://mumiz-ops.github.io/ai-crime-visualizer/login)
 <div align="center">
 
 # 🚨 AI Crime Visualizer
