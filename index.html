@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Crime Visualizer</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.6; color: #c9d1d9; background-color: #0d1117; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .container { text-align: center; }
+        .scanner-box { background: #161b22; color: #58a6ff; padding: 20px; border-radius: 12px; font-family: 'Consolas', monospace; border: 1px solid #30363d; text-align: left; margin: 20px auto; box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+        .progress-bg { background: #21262d; width: 100%; height: 8px; border-radius: 4px; margin: 15px 0; }
+        #ai-progress { background: #238636; width: 0%; height: 100%; border-radius: 4px; transition: width 0.3s; }
+        .log-window { background: #010409; padding: 12px; border-radius: 6px; height: 120px; overflow: hidden; font-size: 13px; border: 1px solid #30363d; color: #3fb950; }
+        .btn { background-color: #238636; color: white; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; }
+        .btn:hover { background-color: #2ea043; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚨 AI Crime Visualizer</h1>
+        <p>Final Year Project | Computer Science Portfolio</p>
+        
+        <br>
+        <a href="./login" class="btn">🚀 Launch AI Visualizer Portal</a>
+        <br><br>
+
+        <div class="scanner-box">
+            <div style="display: flex; justify-content: space-between;">
+                <b>📡 AI NETWORK SCANNER: ACTIVE</b>
+                <span style="color: #8b949e; font-size: 11px;">SYSTEM SECURE</span>
+            </div>
+            <div class="progress-bg">
+                <div id="ai-progress"></div>
+            </div>
+            <div id="data-log" class="log-window">
+                > Initializing CrimeVision 2.0...<br>
+                > Connecting to Lahore Dataset...
+            </div>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+            <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white">
+        </div>
+    </div>
+
+    <script>
+        const log = document.getElementById('data-log');
+        const bar = document.getElementById('ai-progress');
+        const crimeData = [
+            "LOC: Gulberg III | TYPE: Theft | RISK: Med",
+            "LOC: DHA Phase 5 | TYPE: Vandalism | RISK: Low",
+            "LOC: Model Town | TYPE: Burglary | RISK: High",
+            "LOC: Johar Town | TYPE: Vehicle Theft | RISK: Med",
+            "LOC: Anarkali | TYPE: Crowd Control | RISK: High",
+            "LOC: Bahria Town | TYPE: Suspicious | RISK: Low"
+        ];
+        let progress = 0;
+        setInterval(() => {
+            progress = (progress + 15) % 100;
+            if (bar) bar.style.width = progress + "%";
+            const randomRecord = crimeData[Math.floor(Math.random() * crimeData.length)];
+            const time = new Date().toLocaleTimeString();
+            if (log) {
+                const newEntry = document.createElement('div');
+                newEntry.style.borderBottom = "1px solid #161b22";
+                newEntry.innerHTML = `[${time}] > ${randomRecord}`;
+                log.prepend(newEntry);
+                if (log.children.length > 5) log.removeChild(log.lastElementChild);
+            }
+        }, 1800);
+    </script>
+</body>
+</html>
